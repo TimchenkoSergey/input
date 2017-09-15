@@ -1,0 +1,19 @@
+{
+  "name": "webrtc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "express": "^4.15.4",
+    "express-oauth-server": "^2.0.0",
+    "node-static": "^0.7.9",
+    "oauth2-server": "^3.0.0",
+    "socket.io": "^2.0.3"
+  }
+}
