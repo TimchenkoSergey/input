@@ -14,7 +14,15 @@ var MuteMicro = (function () {
     }
 
     function clickHandler() {
+        var icon = this.querySelector('i');
         microMuted = !microMuted;
+
+        if (microMuted) {
+            Utils.replaceClasses(icon, 'fa-microphone', 'fa-microphone-slash');
+        } else {
+            Utils.replaceClasses(icon, 'fa-microphone-slash', 'fa-microphone');
+        }
+
         callBack(microMuted);
     }
 
@@ -22,7 +30,9 @@ var MuteMicro = (function () {
         var wrapper = document.createElement('div');
 
         wrapper.innerHTML = (
-            '<button type="button" class="mute-micro-button">Mute</button>'
+            '<button type="button" class="mute-micro-button">' +
+                '<i class="fa fa-microphone-slash custom-icon-local" aria-hidden="true"></i>' +
+            '</button>'
         );
 
         wrapper.className = 'mute-micro-wrapper';

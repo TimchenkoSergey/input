@@ -11,11 +11,13 @@ var Constants = (function () {
     };
     var userOptions = { audio: true, video: true };
     var bandwidth = 1500;
+    var roomId = location.pathname.replace('/', '');
 
     return {
         offerOptions: offerOptions,
         server: server,
         userOptions: userOptions,
         bandwidth: bandwidth,
+        roomId: roomId,
     };
 })();

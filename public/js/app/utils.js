@@ -2,11 +2,24 @@ var Utils = (function () {
     return {
         log: log,
         errorHandler: errorHandler,
+        replaceClasses: replaceClasses,
         setMediaBitrates: setMediaBitrates,
     };
 
     function log(str, obj) {
         console.log(str, obj);
+    }
+
+    function replaceClasses(element, addClass, removeClasses) {
+        element.classList.add(addClass);
+
+        if (removeClasses instanceof Array) {
+            removeClasses.forEach(function (cssClass) {
+                element.classList.remove(cssClass);
+            });
+        } else {
+            element.classList.remove(removeClasses);
+        }
     }
 
     function errorHandler(err) {

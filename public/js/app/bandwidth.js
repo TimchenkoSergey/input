@@ -18,7 +18,7 @@ var Bandwidth = (function () {
         var wrapper = document.createElement('div');
 
         wrapper.innerHTML = (
-            '<select class="select-bandwidth">' +
+            '<select class="select-bandwidth tooltipped" data-position="top" data-tooltip="Качество видео">' +
                 '<option value="1500" selected>Высокое</option>' +
                 '<option value="500">Среднее</option>' +
                 '<option value="125">Низкое</option>' +

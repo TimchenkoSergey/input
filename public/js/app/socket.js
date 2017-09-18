@@ -6,7 +6,8 @@ var Socket = (function () {
         sendMessage: sendMessage,
     };
 
-    function sendMessage(message){
+    function sendMessage(message) {
+        message.roomId = Constants.roomId;
         socket.emit('message', message);
     }
 })();
